@@ -1,6 +1,17 @@
 class HelloController < ApplicationController
-  def index
-    @title = "view sample"
-    @msg = "コントローラに用意した値です"
-  end
+
+
+ def index
+   if request.post? then
+     @title = 'Result'
+     @msg = 'you typed: ' + params['input1'] + '.'
+     @value = params['input1']
+   else
+     @title = 'Index'
+     @msg = 'type text...'
+     @value = ''
+   end
+ end
+
+
 end
