@@ -1,19 +1,13 @@
 class HelloController < ApplicationController
+  layout 'hello'
 
 
- def index
-   if request.post? then
-     @title = 'Result'
-     if params['check1'] then
-      @msg = 'you checked!'
-     else
-      @msg = 'not checked...'
-     end
-   else
-     @title = 'Index'
-     @msg = 'check it...'
-   end
- end
+  def index
+    @header = 'layout sample'
+    @footer = 'copyright SYODA-Tuyano 2020.'
+    @title = 'New Layout'
+    @msg = 'this is sample page!'
+  end
 
 
 end
