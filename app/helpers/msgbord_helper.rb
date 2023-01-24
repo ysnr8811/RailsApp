@@ -1,0 +1,2 @@
+module MsgbordHelper
+end
